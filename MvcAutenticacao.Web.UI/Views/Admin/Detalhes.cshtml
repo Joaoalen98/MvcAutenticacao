@@ -1,0 +1,36 @@
+﻿@model MvcAutenticacao.Models.Usuario
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Informações do usuário:</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            Cargo
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserRole.Nome)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Deletar Usuario", "DeletarUsuario", new { id = Model.Id }, new { @class = "btn btn-danger" }) |
+    <a asp-action="Usuarios" class="btn btn-info">Voltar Para Lista</a>
+</div>

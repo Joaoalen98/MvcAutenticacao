@@ -1,0 +1,38 @@
+﻿@model MvcAutenticacao.Models.Usuario
+
+@{
+    ViewData["Title"] = "DeletarUsuario";
+}
+
+<h1>DeletarUsuario</h1>
+
+<h3>Tem certeza que deseja deletar este usuário?</h3>
+<div>
+    <h4>Confirme os dados:</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            Cargo
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserRole.Nome)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeletarUsuario">
+        <input type="submit" value="Deletar" class="btn btn-danger" /> |
+        <a asp-action="Usuarios" class="btn btn-info">Voltar Para Lista</a>
+    </form>
+</div>
