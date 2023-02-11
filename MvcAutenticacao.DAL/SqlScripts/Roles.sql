@@ -1,5 +1,5 @@
 ﻿INSERT INTO UsersRoles(Nome)
 VALUES 
-	('UsuarioComum'),
-	('UsuarioPremium'),
+	('Usuario Comum'),
+	('Usuario Premium'),
 	('Admin');
